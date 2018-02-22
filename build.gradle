@@ -1,0 +1,18 @@
+apply plugin: 'elasticsearch.esplugin'
+
+esplugin {
+  name 'painless-seohash'
+  description 'Whitelisted SEO hasing function'
+  classname 'org.publitek.seohash.SeoHashPlugin'
+  extendedPlugins = ['lang-painless']
+}
+
+dependencies {
+  compileOnly project(':modules:lang-painless')
+}
+
+integTestCluster {
+  distribution = 'zip'
+}
+
+test.enabled = false
