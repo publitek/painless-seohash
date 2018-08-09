@@ -1,0 +1,3 @@
+class com.fotosearch.plugins.seohash.SeoHash {
+    BigInteger getHash(String)
+}
