@@ -5,4 +5,5 @@ This plugin allows us to recreate those hashes in elasticsearch to use in our te
 
 To build this plugin it appears that you have to build it as part of the elasticsearch application.
 So checkout the correct version of elasticsearch and then check this out in the plugins directory.
-Then form the elasticsearch project root run `gradle assemble` and then just copy the zip out of `plugins/painless-seohash/build/distributions/`
+https://github.com/elastic/elasticsearch/tree/v6.3.2#building-from-source
+Then form the elasticsearch project root run `./gradlew assemble` and then just copy the zip out of `plugins/painless-seohash/build/distributions/`
