@@ -15,15 +15,12 @@
  *
  */
 
-package com.fotosearch.plugins.seohash;
-
-import java.security.NoSuchAlgorithmException;
 import java.io.UnsupportedEncodingException;
-import java.lang.IllegalArgumentException;
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
 import java.math.BigInteger;
 import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 
 public class SeoHash {

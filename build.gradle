@@ -4,7 +4,7 @@ esplugin {
   name 'painless-seohash'
   version '6.3.2'
   description 'Whitelisted SEO hasing function'
-  classname 'com.fotosearch.plugins.SeoHashPlugin'
+  classname 'SeoHashPlugin'
   extendedPlugins = ['lang-painless']
 }
 
