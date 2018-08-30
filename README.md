@@ -5,5 +5,38 @@ This plugin allows us to recreate those hashes in elasticsearch to use in our te
 
 To build this plugin it appears that you have to build it as part of the elasticsearch application.
 So checkout the correct version of elasticsearch and then check this out in the plugins directory.
-https://github.com/elastic/elasticsearch/tree/v6.3.2#building-from-source
-Then form the elasticsearch project root run `./gradlew assemble` and then just copy the zip out of `plugins/painless-seohash/build/distributions/`
+https://github.com/elastic/elasticsearch/tree/v6.4.0#building-from-source
+
+1. Download correct version of elasticsearch
+   ```
+   wget https://github.com/elastic/elasticsearch/archive/v6.4.0.tar.gz
+   ```
+1. Unzip elasticsearch project
+   ```
+   tar -zxf elasticsearch-6.4.0.tar.gz
+   ```
+1. Move into elasticsearch directory
+   ```
+   cd ./elasticsearch-6.4.0
+   ```
+1. Copy the plugin into the plugins directory
+   ```
+   cp -r ~/workspace/painless-seohash  ./plugins/
+   ```
+   Or checkout the plugin into the plugins directory
+   ```
+   git clone git@github.com:publitek/painless-seohash.git ./plugins/painless-seohash
+   ```
+1. Set JAVA_HOME environmental variable
+   ```
+   export JAVA_HOME=/usr/lib/jvm/java-10-openjdk
+   ```
+1. Compile elasticsearch project
+   ```
+   ./gradlew assemble
+   ```
+1. Copy the assembled plugin zip file
+   ```
+   ./plugins/painless-seohash/build/distributions/painless-seohash-6.4.0-SNAPSHOT.zip
+   ```
+

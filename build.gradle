@@ -2,7 +2,7 @@ apply plugin: 'elasticsearch.esplugin'
 
 esplugin {
   name 'painless-seohash'
-  version '6.3.2'
+  version '6.4.0'
   description 'Whitelisted SEO hasing function'
   classname 'SeoHashPlugin'
   extendedPlugins = ['lang-painless']
