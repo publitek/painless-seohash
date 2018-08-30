@@ -15,6 +15,8 @@
  *
  */
 
+package com.fotosearch.plugins.seohash;
+
 import org.elasticsearch.plugins.Plugin;
 
 

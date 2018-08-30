@@ -7,23 +7,12 @@ To build this plugin it appears that you have to build it as part of the elastic
 So checkout the correct version of elasticsearch and then check this out in the plugins directory.
 https://github.com/elastic/elasticsearch/tree/v6.4.0#building-from-source
 
-1. Download correct version of elasticsearch
+1. Git clone the elasticsearch project
    ```
-   wget https://github.com/elastic/elasticsearch/archive/v6.4.0.tar.gz
-   ```
-1. Unzip elasticsearch project
-   ```
-   tar -zxf elasticsearch-6.4.0.tar.gz
-   ```
-1. Move into elasticsearch directory
-   ```
-   cd ./elasticsearch-6.4.0
-   ```
-1. Copy the plugin into the plugins directory
-   ```
-   cp -r ~/workspace/painless-seohash  ./plugins/
-   ```
-   Or checkout the plugin into the plugins directory
+   git clone https://github.com/elastic/elasticsearch.git
+   git checkout tags/v6.4.0
+   cd ./elasticsearch
+1. Checkout the seohash plugin into the plugins directory
    ```
    git clone git@github.com:publitek/painless-seohash.git ./plugins/painless-seohash
    ```

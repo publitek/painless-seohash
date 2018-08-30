@@ -15,6 +15,8 @@
  *
  */
 
+package com.fotosearch.plugins.seohash;
+
 import org.elasticsearch.painless.spi.PainlessExtension;
 import org.elasticsearch.painless.spi.Whitelist;
 import org.elasticsearch.painless.spi.WhitelistLoader;
@@ -29,8 +31,7 @@ import java.util.Map;
 
 public class SeoHashExtension implements PainlessExtension {
 
-    private static final Whitelist WHITELIST =
-        WhitelistLoader.loadFromResourceFiles(SeoHashExtension.class, "seohash_whitelist.txt");
+    private static final Whitelist WHITELIST = WhitelistLoader.loadFromResourceFiles(SeoHashExtension.class, "seohash_whitelist.txt");
 
     @Override
     public Map<ScriptContext<?>, List<Whitelist>> getContextWhitelists() {
