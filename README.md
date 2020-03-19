@@ -8,32 +8,42 @@ So checkout the correct version of elasticsearch and then check this out in the 
 https://github.com/elastic/elasticsearch/tree/v6.5.0#building-from-source
 
 1. Git clone the elasticsearch project
-   ```
+   ```shell script
    git clone https://github.com/elastic/elasticsearch.git
    cd ./elasticsearch
-   git checkout tags/v6.5.0
-1. Checkout the seohash plugin into the plugins directory
+   git checkout tags/v6.8.0
    ```
+1. Checkout the seohash plugin into the plugins directory
+   ```shell script
    git clone git@github.com:publitek/painless-seohash.git ./plugins/painless-seohash
    ```
 1. Update the version number in the plugin
-   ```
+   ```shell script
    vim ./plugins/painless-seohash/build.gradle
    ```
-1. Install Java 11 JDK
+1. Install Java 12 JDK
+   ```shell script
+   sudo dnf install java-12-openjdk-devel
    ```
-   sudo dnf install java-11-openjdk-devel
+   OR
+   ```shell script
+   cd /home/byoungb/tmp/
+   wget https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_linux-x64_bin.tar.gz
+   tar zxf openjdk-12.0.2_linux-x64_bin.tar.gz
    ```
 1. Set JAVA_HOME environmental variable
+   ```shell script
+   export JAVA_HOME=/usr/lib/jvm/java-12-openjdk
    ```
-   export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
+   OR
+   ```shell script
+   export JAVA_HOME=/home/byoungb/tmp/jdk-12.0.2
    ```
 1. Compile elasticsearch project
-   ```
+   ```shell script
    ./gradlew assemble
    ```
 1. Copy the assembled plugin zip file
    ```
    ./plugins/painless-seohash/build/distributions/painless-seohash-6.5.0-SNAPSHOT.zip
    ```
-
