@@ -45,5 +45,9 @@ https://github.com/elastic/elasticsearch/tree/v6.5.0#building-from-source
    ```
 1. Copy the assembled plugin zip file
    ```
-   ./plugins/painless-seohash/build/distributions/painless-seohash-6.5.0-SNAPSHOT.zip
+   ./plugins/painless-seohash/build/distributions/painless-seohash-6.8.0-SNAPSHOT.zip
+   ```
+1. Install plugin
+   ```
+   sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/byoungb/painless-seohash-6.8.0-SNAPSHOT.zip
    ```
