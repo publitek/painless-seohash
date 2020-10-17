@@ -21,7 +21,8 @@ import org.elasticsearch.painless.spi.PainlessExtension;
 import org.elasticsearch.painless.spi.Whitelist;
 import org.elasticsearch.painless.spi.WhitelistLoader;
 import org.elasticsearch.script.ScriptContext;
-import org.elasticsearch.script.SearchScript;
+import org.elasticsearch.script.FieldScript;
+import org.elasticsearch.script.AggregationScript;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -31,13 +32,12 @@ import java.util.Map;
 
 public class SeoHashExtension implements PainlessExtension {
 
-    private static final Whitelist WHITELIST = WhitelistLoader.loadFromResourceFiles(SeoHashExtension.class, "seohash_whitelist.txt");
-
     @Override
     public Map<ScriptContext<?>, List<Whitelist>> getContextWhitelists() {
+        Whitelist classWhitelist = WhitelistLoader.loadFromResourceFiles(SeoHashExtension.class, "seohash_whitelist.txt");
         Map<ScriptContext<?>, List<Whitelist>> map = new HashMap<ScriptContext<?>, List<Whitelist>>();
-        map.put(SearchScript.CONTEXT, Collections.singletonList(WHITELIST));
-        map.put(SearchScript.AGGS_CONTEXT, Collections.singletonList(WHITELIST));
+        map.put(FieldScript.CONTEXT, Collections.singletonList(classWhitelist));
+        map.put(AggregationScript.CONTEXT, Collections.singletonList(classWhitelist));
         return map;
     }
 }

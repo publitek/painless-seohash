@@ -1,3 +1,8 @@
 class com.fotosearch.plugins.seohash.SeoHash {
     BigInteger getHash(String)
+    String getSeoGroup(String, String, String)
+}
+
+static_import {
+  String getSeoGroup(String, String, String) from_class com.fotosearch.plugins.seohash.SeoHash
 }

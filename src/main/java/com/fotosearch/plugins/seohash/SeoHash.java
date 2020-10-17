@@ -39,4 +39,8 @@ public class SeoHash {
         byte[] hash = MD5.digest(decoded.getBytes(StandardCharsets.UTF_8));
         return new BigInteger(1, hash);
     }
+
+    public static String getSeoGroup(String test_name, String groups, String path) throws NoSuchAlgorithmException {
+        return getHash("seo" + test_name + "__" + path).remainder(new BigInteger(groups)).toString();
+    }
 }
