@@ -11,7 +11,7 @@ https://github.com/elastic/elasticsearch/tree/v6.5.0#building-from-source
    ```shell script
    git clone https://github.com/elastic/elasticsearch.git
    cd ./elasticsearch
-   git checkout tags/v6.8.0
+   git checkout tags/v7.10.0
    ```
 1. Checkout the seohash plugin into the plugins directory
    ```shell script
@@ -23,19 +23,11 @@ https://github.com/elastic/elasticsearch/tree/v6.5.0#building-from-source
    ```
 1. Install Java 12 JDK
    ```shell script
-   sudo dnf install java-12-openjdk-devel
-   ```
-   OR
-   ```shell script
    cd /home/byoungb/tmp/
    wget https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_linux-x64_bin.tar.gz
    tar zxf openjdk-12.0.2_linux-x64_bin.tar.gz
    ```
 1. Set JAVA_HOME environmental variable
-   ```shell script
-   export JAVA_HOME=/usr/lib/jvm/java-12-openjdk
-   ```
-   OR
    ```shell script
    export JAVA_HOME=/home/byoungb/tmp/jdk-12.0.2
    ```
@@ -45,9 +37,9 @@ https://github.com/elastic/elasticsearch/tree/v6.5.0#building-from-source
    ```
 1. Copy the assembled plugin zip file
    ```
-   ./plugins/painless-seohash/build/distributions/painless-seohash-6.8.0-SNAPSHOT.zip
+   ./plugins/painless-seohash/build/distributions/painless-seohash-7.10.0-SNAPSHOT.zip
    ```
 1. Install plugin
    ```
-   sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/byoungb/painless-seohash-6.8.0-SNAPSHOT.zip
+   sudo /usr/share/elasticsearch/bin/elasticsearch-plugin install file:///home/byoungb/painless-seohash-7.10.0-SNAPSHOT.zip
    ```
